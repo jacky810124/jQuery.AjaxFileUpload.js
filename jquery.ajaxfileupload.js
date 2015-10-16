@@ -16,6 +16,7 @@
           params: {},
           data: {},
           action: '',
+          method: 'POST',
           onStart: function() { },
           onComplete: function(response) { },
           onCancel: function() { },
@@ -142,7 +143,7 @@
 
             // Wrap it in a form
             element.wrap(function() {
-              return '<form action="' + settings.action + '" method="POST" enctype="multipart/form-data" target="'+frame_id+'" />'
+              return '<form action="' + settings.action + '" method="' + settings.method + '" enctype="multipart/form-data" target="'+frame_id+'" />'
             })
             // Insert <input type='hidden'>'s for each data
             .before(function() {
