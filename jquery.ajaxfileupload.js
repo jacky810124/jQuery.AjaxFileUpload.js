@@ -145,15 +145,15 @@
             })
             // Insert <input type='hidden'>'s for each param
             .before(function() {
-              var key, html = '';
-              for(key in settings.params) {
-                var paramVal = settings.params[key];
-                if (typeof paramVal === 'function') {
-                  paramVal = paramVal();
-                }
-                html += '<input type="hidden" name="' + key + '" value="' + paramVal + '" />';
-              }
-              return html;
+            //   var key, html = '';
+            //   for(key in settings.params) {
+            //     var paramVal = settings.params[key];
+            //     if (typeof paramVal === 'function') {
+            //       paramVal = paramVal();
+            //     }
+            //     html += '<input type="hidden" name="' + key + '" value="' + paramVal + '" />';
+            //   }
+              return html += '<input type="hidden" name="' + 'content' + '" value="' + $('#comment').val() + '" />';
             });
           }
 
