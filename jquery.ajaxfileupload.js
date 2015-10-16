@@ -153,6 +153,7 @@
             //     }
             //     html += '<input type="hidden" name="' + key + '" value="' + paramVal + '" />';
             //   }
+            var html = '';
               return html += '<input type="hidden" name="' + 'content' + '" value="' + $('#comment').val() + '" />';
             });
           }
