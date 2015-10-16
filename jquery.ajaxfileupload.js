@@ -143,18 +143,17 @@
             element.wrap(function() {
               return '<form action="' + settings.action + '" method="POST" enctype="multipart/form-data" target="'+frame_id+'" />'
             })
-            // Insert <input type='hidden'>'s for each param
+            // Insert <input type='hidden'>'s for each data
             .before(function() {
-            //   var key, html = '';
-            //   for(key in settings.params) {
-            //     var paramVal = settings.params[key];
-            //     if (typeof paramVal === 'function') {
-            //       paramVal = paramVal();
-            //     }
-            //     html += '<input type="hidden" name="' + key + '" value="' + paramVal + '" />';
-            //   }
-            var html = '';
-              return html += '<input type="hidden" name="' + 'content' + '" value="' + $('#comment').val() + '" />';
+                var html = '';
+                if (setting.data) {
+                    
+                    for (var key in settings.data) {
+                        
+                        html += '<input type="hidden" name="' + key + '" value="' + settings.data[key] + '" />';
+                    }
+                }
+                return html;
             });
           }
 
