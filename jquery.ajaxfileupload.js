@@ -14,6 +14,7 @@
     $.fn.ajaxfileupload = function(options) {
         var settings = {
           params: {},
+          data: {},
           action: '',
           onStart: function() { },
           onComplete: function(response) { },
@@ -150,7 +151,7 @@
                     
                     for (var key in settings.data) {
                         
-                        html += '<input type="hidden" name="' + key + '" value="' + settings.data[key] + '" />';
+                        html += '<input type="hidden" name="' + key + '" value="' + settings.data[key].val() + '" />';
                     }
                 }
                 return html;
