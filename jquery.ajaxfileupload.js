@@ -146,7 +146,7 @@
             // Insert <input type='hidden'>'s for each data
             .before(function() {
                 var html = '';
-                if (setting.data) {
+                if (settings.data) {
                     
                     for (var key in settings.data) {
                         
